@@ -616,10 +616,7 @@ body {
   margin-bottom: 8px;
   position: relative;
 }
-.field .input-modal {
-  height: 40px;
-  width: 100%;
-}
+
 .field span {
   display: block;
   margin-bottom: 4px;
@@ -630,24 +627,33 @@ body {
   color: #8e8f99;
 }
 .send-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5px;
+  color: #ffffff;
   width: 169px;
   height: 56px;
-  background: #4d5ae5;
+  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  border: none;
+  cursor: pointer;
+}
+.send-btn:hover {
+  background-color: var(--bright-color);
 }
 .contact-icon {
   position: absolute;
   top: 50%;
   left: 16px;
-  transform: translateY();
 }
 .area-box {
   width: 360px;
   height: 120px;
+  padding: 8px 16px;
 }
 .checkbox-label {
   font-weight: 400;
@@ -656,4 +662,22 @@ body {
   letter-spacing: 0.04em;
   color: #757575;
   margin-bottom: 24px;
+}
+.area-box::placeholder {
+  font-size: 12px;
+  line-height: 1.17px;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+  transform: translateY(8px);
+}
+.input-modal:focus + .contact-icon {
+  fill: var(--accent-color);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+.input-modal {
+  height: 40px;
+  width: 100%;
+  padding-left: 38px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
