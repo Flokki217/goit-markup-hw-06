@@ -654,6 +654,18 @@ body {
   width: 360px;
   height: 120px;
   padding: 8px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  resize: none;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
+}
+.area-box:focus {
+  border-color: var(--accent-color);
+}
+.area-box:hover {
+  border-color: var(--accent-color);
 }
 .checkbox-label {
   font-weight: 400;
@@ -680,4 +692,8 @@ body {
   padding-left: 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: transparent;
+}
+.input-modal:focus {
+  border-color: var(--accent-color);
 }
