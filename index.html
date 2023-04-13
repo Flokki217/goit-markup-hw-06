@@ -387,44 +387,56 @@
         <p class="form-tittle">Leave your contacts and we will call you back</p>
         <form name="form-cotact" class="form-field">
           <div class="name field">
-            <label for="name"> <span>Name</span> </label>
+            <label for="name" class="label-text">Name </label>
             <input type="text" name="user-name" id="name" class="input-modal" />
-            <svg width="18" height="18" class="contact-icon">
+            <svg width="18" height="18" class="contact-icon person">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </div>
           <div class="phone field">
-            <label for="phone"><span>Phone</span></label>
+            <label for="phone" class="label-text">Phone</label>
             <input type="tel" name="phone" id="phone" class="input-modal" />
             <svg width="18" height="24" class="contact-icon">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </div>
           <div class="email field">
-            <label for="email"><span>Email</span> </label>
+            <label for="email" class="label-text">Email </label>
             <input type="email" id="email" class="input-modal" />
             <svg width="18" height="24" class="contact-icon">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </div>
           <div class="comment field">
-            <label for="comment" class="comment-label"
-              ><span>Comment</span>
+            <label for="comment" class="comment-label label-text"
+              >Comment
             </label>
             <textarea
               name="comment"
               id="comment"
               placeholder="Text input"
-              class="area-box"
+              class="area-box input-modal"
             ></textarea>
           </div>
-          <div class="checkbox-label">
-            <input type="checkbox" id="checkbox" />
-            <label for="checkbox"
-              >I accept the terms and conditions of the
-              <a href="#">Privacy Policy</a>
-            </label>
+
+          <div class="check-field">
+            <input
+              type="checkbox"
+              id="checkbox"
+              class="check-input visually-hidden"
+            />
+
+            <label for="checkbox" class="checkbox-label">
+              <span class="my-box">
+                <svg width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href=""> Privacy Policy</a></label
+            >
           </div>
+
           <button type="submit" class="send-btn">Send</button>
         </form>
       </div>
