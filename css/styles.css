@@ -4,6 +4,7 @@
   --tittle-color: #2e2f42;
   --accent-color: #4d5ae5;
   --white-color: #ffffff;
+  --cloud-color: #f4f4fd;
   --for-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current-page::after {
@@ -238,7 +239,7 @@ body {
 .skill-icon {
   width: 264px;
   height: 112px;
-  background: #f4f4fd;
+  background: var(--cloud-color);
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
@@ -280,7 +281,7 @@ body {
 }
 /* Team */
 .team {
-  background-color: #f4f4fd;
+  background-color: var(--cloud-color);
   padding-bottom: 120px;
   padding-top: 120px;
 }
@@ -340,7 +341,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f4f4fd;
+  color: var(--cloud-color);
 }
 .soc-link:hover,
 .soc-link:focus {
@@ -398,6 +399,7 @@ body {
   background-color: var(--tittle-color);
   padding-top: 100px;
   padding-bottom: 100px;
+  display: flex;
 }
 .footer-text {
   color: #e7e9fc;
@@ -422,13 +424,16 @@ body {
 .footer-section .container {
   display: flex;
 }
+.footer-form {
+  display: flex;
+}
 .footer-social {
   margin-left: 120px;
 }
 .footer-social .soc-link {
   transition: background-color var(--for-animation);
   background: rgba(255, 255, 255, 0.1);
-  color: #f4f4fd;
+  color: var(--cloud-color);
 }
 .footer-social .soc-icon {
   fill: currentColor;
@@ -448,13 +453,71 @@ body {
   margin-bottom: 16px;
 }
 .footer-section .footer-studio {
-  color: #f4f4fd;
+  color: var(--cloud-color);
 }
 .footer-soc-list {
   display: flex;
   gap: 16px;
 }
+.footer-form-container {
+  height: 80px;
+  margin-right: auto;
+  margin-left: 80px;
+  display: block;
+}
 
+.footer-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  margin-right: 24px;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border-color var(--for-animation);
+}
+.footer-btn {
+  width: 165px;
+  height: 40px;
+  background-color: var(--accent-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  transition: background-color var(--for-animation);
+  cursor: pointer;
+}
+.footer-btn:focus,
+.footer-btn:hover {
+  background-color: var(--bright-color);
+}
+.footer-send-icon {
+  fill: var(--white-color);
+  margin-left: 16px;
+}
+.footer-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-input:focus {
+  border-color: var(--accent-color);
+}
+.container-email {
+  width: 264px;
+}
 /* -------------------Portfolio------------------------------------- */
 .portfolio {
   padding-bottom: 120px;
@@ -478,7 +541,7 @@ body {
   letter-spacing: 0.04em;
   line-height: 1.5;
   color: var(--accent-color);
-  background-color: #f4f4fd;
+  background-color: var(--cloud-color);
   border: 1px solid #e7e9fc;
 }
 .portfolio-buttons .item + .item {
@@ -546,10 +609,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
+  color: var(--cloud-color);
   transform: translateY(100%);
   transition: transform var(--for-animation);
 }
+/* -----------------Modal-Window-------------------------- */
 .backdrop {
   width: 100%;
   height: 100%;
@@ -595,7 +659,7 @@ body {
 }
 .close-btn:active {
   background-color: var(--bright-color);
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 .is-hidden {
   visibility: hidden;
@@ -667,6 +731,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-color);
   outline: none;
+  transition: border-color var(--for-animation);
 }
 .input-modal:focus {
   border-color: var(--accent-color);
@@ -682,6 +747,7 @@ body {
 }
 .checkbox-label a {
   margin-left: 2px;
+  color: var(--accent-color);
 }
 .my-box {
   display: flex;
@@ -693,14 +759,14 @@ body {
   justify-content: center;
   fill: none;
   margin-right: 8px;
-
+  transition: background-color var(--for-animation);
   transform: translateY(-2px);
 }
 .check-field {
   margin-bottom: 24px;
 }
 .check-input:checked + .checkbox-label .my-box {
-  fill: #f4f4fd;
+  fill: var(--cloud-color);
   background-color: var(--bright-color);
   border: none;
 }
@@ -708,10 +774,10 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5px;
-  color: #ffffff;
+  color: var(--white-color);
   width: 169px;
   height: 56px;
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-left: auto;
@@ -719,6 +785,7 @@ body {
   display: block;
   border: none;
   cursor: pointer;
+  transition: background-color var(--for-animation);
 }
 .send-btn:hover {
   background-color: var(--bright-color);
