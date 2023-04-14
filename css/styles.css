@@ -747,7 +747,7 @@ body {
   display: flex;
 }
 .checkbox-label a {
-  margin-left: 2px;
+  margin-left: 4px;
   color: var(--accent-color);
 }
 .my-box {
