@@ -658,7 +658,9 @@ body {
   cursor: pointer;
   fill: #000000;
 }
-.close-btn:active {
+.close-btn:active,
+.colose-btn:focus,
+.close-btn:hover {
   background-color: var(--bright-color);
   fill: var(--white-color);
 }
@@ -675,7 +677,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--tittle-color);
   margin-top: 24px;
-  margin-bottom: 34px;
+  margin-bottom: 16px;
 }
 
 .field {
@@ -732,6 +734,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-color);
   outline: none;
+  border-radius: 4px;
   transition: border-color var(--for-animation);
 }
 .input-modal:focus {
@@ -768,7 +771,7 @@ body {
 }
 .check-input:checked + .checkbox-label .my-box {
   fill: var(--cloud-color);
-  background-color: var(--bright-color);
+  background-color: var(--accent-color);
   border: none;
 }
 .send-btn {
