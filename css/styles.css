@@ -657,6 +657,7 @@ body {
   margin-left: auto;
   cursor: pointer;
   fill: #000000;
+  transition: background-color var(--for-animation), fill var(--for-animation);
 }
 .close-btn:active,
 .colose-btn:focus,
