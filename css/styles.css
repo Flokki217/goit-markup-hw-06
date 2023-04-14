@@ -478,7 +478,7 @@ body {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.6);
+  color: #d9d9d9;
   transition: border-color var(--for-animation);
   padding-left: 16px;
 }
